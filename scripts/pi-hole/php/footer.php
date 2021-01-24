@@ -100,5 +100,8 @@
 </div>
 <!-- ./wrapper -->
 <script src="scripts/pi-hole/js/footer.js?v=<?=$cacheVer?>"></script>
+<script>
+  feather.replace()
+</script>
 </body>
 </html>

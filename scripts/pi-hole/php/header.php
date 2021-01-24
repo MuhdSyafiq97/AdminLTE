@@ -165,7 +165,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta http-equiv="Content-Security-Policy" content="default-src 'none'; base-uri 'none'; child-src 'self'; form-action 'self'; frame-src 'self'; font-src 'self'; connect-src 'self'; img-src 'self'; manifest-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'">
+    <!-- <meta http-equiv="Content-Security-Policy" content="default-src 'none'; base-uri 'none'; child-src 'self'; form-action 'self'; frame-src 'self'; font-src 'self'; connect-src 'self'; img-src 'self'; manifest-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'"> -->
     <!-- Usually browsers proactively perform domain name resolution on links that the user may choose to follow. We disable DNS prefetching here -->
     <meta http-equiv="x-dns-prefetch-control" content="off">
     <meta http-equiv="cache-control" content="max-age=60,private">
@@ -202,8 +202,10 @@
 <?php } ?>
     <link rel="stylesheet" href="style/pi-hole.css?v=<?=$cacheVer?>">
     <link rel="stylesheet" href="style/themes/<?php echo $theme; ?>.css?v=<?=$cacheVer?>">
-    <noscript><link rel="stylesheet" href="style/vendor/js-warn.css?v=<?=$cacheVer?>"></noscript>
 
+    
+    
+    <noscript><link rel="stylesheet" href="style/vendor/js-warn.css?v=<?=$cacheVer?>"></noscript>
     <script src="scripts/vendor/jquery.min.js?v=<?=$cacheVer?>"></script>
     <script src="style/vendor/bootstrap/js/bootstrap.min.js?v=<?=$cacheVer?>"></script>
     <script src="scripts/vendor/adminlte.min.js?v=<?=$cacheVer?>"></script>
@@ -213,8 +215,13 @@
     <script src="scripts/vendor/moment.min.js?v=<?=$cacheVer?>"></script>
     <script src="scripts/vendor/Chart.min.js?v=<?=$cacheVer?>"></script>
     <script src="style/vendor/font-awesome/js/all.min.js?v=<?=$cacheVer?>"></script>
+
+    <script src="https://unpkg.com/feather-icons/dist/feather.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+<link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+
 </head>
-<body class="hold-transition sidebar-mini <?php if($boxedlayout){ ?>layout-boxed<?php } ?>">
+<body class="hold-transition sidebar-mini">
 <noscript>
     <!-- JS Warning -->
     <div>
@@ -246,7 +253,8 @@ if($auth) {
         <nav class="navbar navbar-static-top">
             <!-- Sidebar toggle button-->
             <a href="#" class="sidebar-toggle-svg" data-toggle="push-menu" role="button">
-                <i aria-hidden="true" class="fa fa-bars"></i>
+                <!-- <i aria-hidden="true" class="fa fa-bars"></i> -->
+                <i data-feather="menu"></i>
                 <span class="sr-only">Toggle navigation</span>
             </a>
             <div class="navbar-custom-menu">
@@ -310,7 +318,7 @@ if($auth) {
         </nav>
     </header>
     <!-- Left side column. contains the logo and sidebar -->
-    <aside class="main-sidebar bg-gray-500">
+    <aside class="main-sidebar">
         <!-- sidebar: style can be found in sidebar.less -->
         <section class="sidebar">
             <!-- Sidebar user panel -->
@@ -412,8 +420,9 @@ if($auth) {
                 <li class="header text-uppercase">Main navigation</li>
                 <!-- Home Page -->
                 <li<?php if($scriptname === "index.php"){ ?> class="active"<?php } ?>>
-                    <a href="index.php">
-                        <i class="fa fa-fw fa-home"></i> <span>Dashboard</span>
+                    <a href="index.php" class="flex items-center" style="display: flex">
+                    <i data-feather="pie-chart" class="h-7 w-7 mr-2"></i>
+                        <span>Dashboard</span>
                     </a>
                 </li>
                 <?php if($auth){ ?>
@@ -662,6 +671,9 @@ if($auth) {
     <!-- Content Wrapper. Contains page content -->
     <div class="content-wrapper">
         <!-- Main content -->
+        <script>
+            feather.replace()
+        </script>
         <section class="content">
 <?php
     // If password is not equal to the password set

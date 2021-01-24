@@ -31,13 +31,10 @@
 <div class="row">
     <div class="col-lg-3 col-sm-6">
         <!-- small box -->
-        <div class="small-box bg-green no-user-select" id="total_queries" title="only A + AAAA queries">
+        <div class="small-box bg-green-100 border-2 hover:text-green-700 border-green-700 text-green-700 no-user-select shadow-lg" id="total_queries" title="only A + AAAA queries">
             <div class="inner">
                 <p>Total queries (<span id="unique_clients">-</span> clients)</p>
                 <h3 class="statistic"><span id="dns_queries_today">---</span></h3>
-            </div>
-            <div class="icon">
-                <i class="fas fa-globe-americas"></i>
             </div>
         </div>
     </div>
@@ -49,9 +46,6 @@
                 <p>Queries Blocked</p>
                 <h3 class="statistic"><span id="queries_blocked_today">---</span></h3>
             </div>
-            <div class="icon">
-                <i class="fas fa-hand-paper"></i>
-            </div>
         </div>
     </div>
     <!-- ./col -->
@@ -61,9 +55,6 @@
             <div class="inner">
                 <p>Percent Blocked</p>
                 <h3 class="statistic"><span id="percentage_blocked_today">---</span></h3>
-            </div>
-            <div class="icon">
-                <i class="fas fa-chart-pie"></i>
             </div>
         </div>
     </div>
