@@ -10,7 +10,7 @@
   <div class="panel panel-default">
     <div class="panel-heading">
       <div class="text-center">
-        <img src="img/logo.svg" alt="Pi-hole logo" style="width: <?php if ($boxedlayout) { ?>50%<?php } else { ?>30%<?php } ?>;">
+        <img src="img/logo.png" alt="Pi-hole logo" style="width: <?php if ($boxedlayout) { ?>50%<?php } else { ?>30%<?php } ?>;">
       </div>
       <br>
 
