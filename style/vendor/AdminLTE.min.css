@@ -5382,3 +5382,23 @@
      }
  }
  
+
+ /* Modified */
+
+.br-aqua {
+    border: 2px solid blue;
+    background: rgba(66, 135, 245, .3);
+    box-shadow: 0px 3px 7px grey;
+ }
+
+.br-green {
+    border: 2px solid green;
+    background: rgba(16, 201, 32, .3);
+    box-shadow: 0px 3px 7px grey;
+ }
+
+.br-orange {
+    border: 2px solid orange;
+    background: rgba(201, 121, 16, .3);
+    box-shadow: 0px 3px 7px grey;
+ }

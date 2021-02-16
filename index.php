@@ -31,7 +31,7 @@
 <div class="row">
     <div class="col-lg-3 col-sm-6">
         <!-- small box -->
-        <div class="small-box no-user-select" id="total_queries" title="only A + AAAA queries">
+        <div class="small-box br-aqua no-user-select" id="total_queries" title="only A + AAAA queries">
             <div class="inner">
                 <p>Total queries (<span id="unique_clients">-</span> clients)</p>
                 <h3 class="statistic"><span id="dns_queries_today">---</span></h3>
@@ -41,7 +41,7 @@
     <!-- ./col -->
     <div class="col-lg-3 col-sm-6">
         <!-- small box -->
-        <div class="small-box no-user-select" id="total_queries" title="only A + AAAA queries">
+        <div class="small-box br-green no-user-select" id="total_queries" title="only A + AAAA queries">
             <div class="inner">
                 <p>Queries Blocked</p>
                 <h3 class="statistic"><span id="queries_blocked_today">---</span></h3>
@@ -51,7 +51,7 @@
     <!-- ./col -->
     <div class="col-lg-3 col-sm-6">
         <!-- small box -->
-        <div class="small-box no-user-select" id="total_queries" title="only A + AAAA queries">
+        <div class="small-box br-orange no-user-select" id="total_queries" title="only A + AAAA queries">
             <div class="inner">
                 <p>Percent Blocked</p>
                 <h3 class="statistic"><span id="percentage_blocked_today">---</span></h3>
