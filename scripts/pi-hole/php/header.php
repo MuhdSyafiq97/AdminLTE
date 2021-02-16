@@ -420,7 +420,7 @@ if($auth) {
                 <!-- Home Page -->
                 <li<?php if($scriptname === "index.php"){ ?> class="active"<?php } ?>>
                     <a href="index.php" class="flex items-center" style="display: flex">
-                    <i data-feather="pie-chart" class="h-7 w-7 mr-2"></i>
+                    <i data-feather="pie-chart" class="ficon"></i>
                         <span>Dashboard</span>
                     </a>
                 </li>
