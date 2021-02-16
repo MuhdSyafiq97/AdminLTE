@@ -31,7 +31,7 @@
 <div class="row">
     <div class="col-lg-3 col-sm-6">
         <!-- small box -->
-        <div class="small-box bg-green-100 border-2 hover:text-green-700 border-green-700 text-green-700 no-user-select shadow-lg" id="total_queries" title="only A + AAAA queries">
+        <div class="small-box no-user-select" id="total_queries" title="only A + AAAA queries">
             <div class="inner">
                 <p>Total queries (<span id="unique_clients">-</span> clients)</p>
                 <h3 class="statistic"><span id="dns_queries_today">---</span></h3>
@@ -41,7 +41,7 @@
     <!-- ./col -->
     <div class="col-lg-3 col-sm-6">
         <!-- small box -->
-        <div class="small-box bg-aqua-100 border-2 hover:text-green-700 border-green-700 text-green-700 no-user-select shadow-lg" id="total_queries" title="only A + AAAA queries">
+        <div class="small-box no-user-select" id="total_queries" title="only A + AAAA queries">
             <div class="inner">
                 <p>Queries Blocked</p>
                 <h3 class="statistic"><span id="queries_blocked_today">---</span></h3>
@@ -51,7 +51,7 @@
     <!-- ./col -->
     <div class="col-lg-3 col-sm-6">
         <!-- small box -->
-        <div class="small-box bg-yellow-100 border-2 hover:text-green-700 border-green-700 text-green-700 no-user-select shadow-lg" id="total_queries" title="only A + AAAA queries">
+        <div class="small-box no-user-select" id="total_queries" title="only A + AAAA queries">
             <div class="inner">
                 <p>Percent Blocked</p>
                 <h3 class="statistic"><span id="percentage_blocked_today">---</span></h3>
@@ -61,7 +61,7 @@
     <!-- ./col -->
     <div class="col-lg-3 col-sm-6">
         <!-- small box -->
-        <div class="small-box bg-red no-user-select" title="<?php echo gravity_last_update(); ?>">
+        <div class="small-box no-user-select" title="<?php echo gravity_last_update(); ?>">
             <div class="inner">
                 <p>Domains on Blocklist</p>
                 <h3 class="statistic"><span id="domains_being_blocked">---</span></h3>
