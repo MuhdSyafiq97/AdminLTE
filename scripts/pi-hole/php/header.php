@@ -651,18 +651,7 @@ if($auth) {
                     </a>
                 </li>
                 <?php } ?>
-                <!-- Donate -->
-                <li>
-                    <a href="https://pi-hole.net/donate/" rel="noopener" target="_blank">
-                        <i class="fab fa-fw fa-paypal"></i> <span>Donate</span>
-                    </a>
-                </li>
-                 <!-- Docs -->
-                 <li>
-                    <a href="https://docs.pi-hole.net/" rel="noopener" target="_blank">
-                        <i class="fa fa-fw fa-question-circle"></i> <span>Documentation</span>
-                    </a>
-                </li>
+               
             </ul>
         </section>
         <!-- /.sidebar -->
