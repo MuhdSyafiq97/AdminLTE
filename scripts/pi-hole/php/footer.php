@@ -72,7 +72,7 @@
                 <?php } else { ?>
                 <ul class="list-inline">
                     <li>
-                        <strong>Pi-hole</strong>
+                        <strong>SamAd</strong>
                         <a href="<?php echo $coreReleasesUrl . "/" . $core_current; ?>" rel="noopener" target="_blank"><?php echo $core_current; ?></a>
                         <?php if ($core_update) { ?> &middot; <a class="lookatme" href="<?php echo $coreReleasesUrl . "/latest"; ?>" rel="noopener" target="_blank">Update available!</a><?php } ?>
                     </li>
