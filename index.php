@@ -41,7 +41,7 @@
     <!-- ./col -->
     <div class="col-lg-3 col-sm-6">
         <!-- small box -->
-        <div class="small-box bg-aqua no-user-select">
+        <div class="small-box bg-aqua-100 border-2 hover:text-green-700 border-green-700 text-green-700 no-user-select shadow-lg" id="total_queries" title="only A + AAAA queries">
             <div class="inner">
                 <p>Queries Blocked</p>
                 <h3 class="statistic"><span id="queries_blocked_today">---</span></h3>
@@ -51,7 +51,7 @@
     <!-- ./col -->
     <div class="col-lg-3 col-sm-6">
         <!-- small box -->
-        <div class="small-box bg-yellow no-user-select">
+        <div class="small-box bg-yellow-100 border-2 hover:text-green-700 border-green-700 text-green-700 no-user-select shadow-lg" id="total_queries" title="only A + AAAA queries">
             <div class="inner">
                 <p>Percent Blocked</p>
                 <h3 class="statistic"><span id="percentage_blocked_today">---</span></h3>

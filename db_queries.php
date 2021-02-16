@@ -111,7 +111,7 @@
     <!-- ./col -->
     <div class="col-lg-3 col-xs-12">
         <!-- small box -->
-        <div class="small-box bg-yellow no-user-select">
+        <div class="small-box bg-yellow no-user-select ">
             <div class="inner">
                 <h3 class="statistic" id="ads_percentage_today">---</h3>
                 <p>Queries Blocked</p>
