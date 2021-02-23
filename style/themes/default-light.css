@@ -18,7 +18,7 @@
 .main-header .navbar .nav .open > a,
 .main-header .navbar .nav .open > a:hover,
 .main-header .navbar .nav .open > a:focus {
-  background-color: rgba(0, 0, 0, 0.1);
+  background-color: #108010;
   color: #f6f6f6;
 }
 .main-header .navbar .sidebar-toggle {
@@ -46,7 +46,7 @@
   border-bottom: 0 solid transparent;
 }
 .main-header .logo:hover {
-  background-color: #357ca5;
+  background-color: #108010;
 }
 .main-header li.user-header {
   background-color: #3c8dbc;

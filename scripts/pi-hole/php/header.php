@@ -183,33 +183,33 @@
         html { background-color: #000; }
     </style>
 <?php } ?>
-    <link rel="stylesheet" href="style/vendor/SourceSansPro/SourceSansPro.css?v=<?=$cacheVer?>">
-    <link rel="stylesheet" href="style/vendor/bootstrap/css/bootstrap.min.css?v=<?=$cacheVer?>">
-    <link rel="stylesheet" href="style/vendor/datatables.min.css?v=<?=$cacheVer?>">
-    <link rel="stylesheet" href="style/vendor/daterangepicker.min.css?v=<?=$cacheVer?>">
+    <link rel="stylesheet" href="style/vendor/SourceSansPro/SourceSansPro.css">
+    <link rel="stylesheet" href="style/vendor/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style/vendor/datatables.min.css">
+    <link rel="stylesheet" href="style/vendor/daterangepicker.min.css">
     <link rel="stylesheet" href="style/vendor/AdminLTE.min.css">
-    <link rel="stylesheet" href="style/vendor/select2.min.css?v=<?=$cacheVer?>">
+    <link rel="stylesheet" href="style/vendor/select2.min.css">
 
 <?php if (in_array($scriptname, array("groups.php", "groups-adlists.php", "groups-clients.php", "groups-domains.php"))){ ?>
-    <link rel="stylesheet" href="style/vendor/animate.min.css?v=<?=$cacheVer?>">
-    <link rel="stylesheet" href="style/vendor/bootstrap-select.min.css?v=<?=$cacheVer?>">
-    <link rel="stylesheet" href="style/vendor/bootstrap-toggle.min.css?v=<?=$cacheVer?>">
+    <link rel="stylesheet" href="style/vendor/animate.min.css">
+    <link rel="stylesheet" href="style/vendor/bootstrap-select.min.css">
+    <link rel="stylesheet" href="style/vendor/bootstrap-toggle.min.css">
 <?php } ?>
-    <link rel="stylesheet" href="style/pi-hole.css?v=<?=$cacheVer?>">
-    <link rel="stylesheet" href="style/themes/<?php echo $theme; ?>.css?v=<?=$cacheVer?>">
+    <link rel="stylesheet" href="style/pi-hole.css">
+    <link rel="stylesheet" href="style/themes/<?php echo $theme; ?>.css">
 
     
     
-    <noscript><link rel="stylesheet" href="style/vendor/js-warn.css?v=<?=$cacheVer?>"></noscript>
-    <script src="scripts/vendor/jquery.min.js?v=<?=$cacheVer?>"></script>
-    <script src="style/vendor/bootstrap/js/bootstrap.min.js?v=<?=$cacheVer?>"></script>
-    <script src="scripts/vendor/adminlte.min.js?v=<?=$cacheVer?>"></script>
-    <script src="scripts/vendor/bootstrap-notify.min.js?v=<?=$cacheVer?>"></script>
-    <script src="scripts/vendor/select2.min.js?v=<?=$cacheVer?>"></script>
-    <script src="scripts/vendor/datatables.min.js?v=<?=$cacheVer?>"></script>
-    <script src="scripts/vendor/moment.min.js?v=<?=$cacheVer?>"></script>
-    <script src="scripts/vendor/Chart.min.js?v=<?=$cacheVer?>"></script>
-    <script src="style/vendor/font-awesome/js/all.min.js?v=<?=$cacheVer?>"></script>
+    <noscript><link rel="stylesheet" href="style/vendor/js-warn.css"></noscript>
+    <script src="scripts/vendor/jquery.min.js"></script>
+    <script src="style/vendor/bootstrap/js/bootstrap.min.js"></script>
+    <script src="scripts/vendor/adminlte.min.js"></script>
+    <script src="scripts/vendor/bootstrap-notify.min.js"></script>
+    <script src="scripts/vendor/select2.min.js"></script>
+    <script src="scripts/vendor/datatables.min.js"></script>
+    <script src="scripts/vendor/moment.min.js"></script>
+    <script src="scripts/vendor/Chart.min.js"></script>
+    <script src="style/vendor/font-awesome/js/all.min.js"></script>
 
     <script src="https://unpkg.com/feather-icons/dist/feather.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
@@ -279,32 +279,7 @@ if($auth) {
                                     <small>Designed For Raspberry Pi</small>
                                 </p>
                             </li>
-                            <!-- Menu Body -->
-                            <li class="user-body">
-                                <div class="row">
-                                    <div class="col-xs-4 text-center">
-                                        <a class="btn-link" href="https://github.com/pi-hole" rel="noopener" target="_blank">GitHub</a>
-                                    </div>
-                                    <div class="col-xs-4 text-center">
-                                        <a class="btn-link" href="https://pi-hole.net/" rel="noopener" target="_blank">Website</a>
-                                    </div>
-                                    <div class="col-xs-4 text-center">
-                                        <a class="btn-link" href="https://github.com/pi-hole/pi-hole/releases" rel="noopener" target="_blank">Updates</a>
-                                    </div>
-                                    <div id="sessiontimer" class="col-xs-12 text-center">
-                                        <strong>Session is valid for <span id="sessiontimercounter"><?php if($auth && strlen($pwhash) > 0){echo $maxlifetime;}else{echo "0";} ?></span></strong>
-                                    </div>
-                                </div>
-                            </li>
-                            <!-- Menu Footer -->
-                            <li class="user-footer">
-                                <!-- PayPal -->
-                                <div class="text-center">
-                                    <a href="https://pi-hole.net/donate/" rel="noopener" target="_blank">
-                                        <img src="img/donate.gif" alt="Donate" width="147" height="47">
-                                    </a>
-                                </div>
-                            </li>
+                            
                         </ul>
                     </li>
                 </ul>
