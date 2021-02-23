@@ -76,17 +76,17 @@
     // Get number of processing units available to PHP
     // (may be less than the number of online processors)
     $nproc = shell_exec('nproc');
-    if(!is_numeric($nproc))
+    /* if(!is_numeric($nproc))
     {
         $cpuinfo = file_get_contents('/proc/cpuinfo');
         preg_match_all('/^processor/m', $cpuinfo, $matches);
         $nproc = count($matches[0]);
-    }
+    } */
 
     // Get memory usage
-    $data = explode("\n", file_get_contents("/proc/meminfo"));
+    // $data = explode("\n", file_get_contents("/proc/meminfo"));
     $meminfo = array();
-    if(count($data) > 0)
+    /* if(count($data) > 0)
     {
         foreach ($data as $line) {
             $expl = explode(":", trim($line));
@@ -103,7 +103,7 @@
     else
     {
         $memory_usage = -1;
-    }
+    } */
 
     if($auth) {
         // For session timer
@@ -165,19 +165,14 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta http-equiv="Content-Security-Policy" content="default-src 'none'; base-uri 'none'; child-src 'self'; form-action 'self'; frame-src 'self'; font-src 'self'; connect-src 'self'; img-src 'self'; manifest-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'">
+    <!-- <meta http-equiv="Content-Security-Policy" content="default-src 'none'; base-uri 'none'; child-src 'self'; form-action 'self'; frame-src 'self'; font-src 'self'; connect-src 'self'; img-src 'self'; manifest-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'"> -->
     <!-- Usually browsers proactively perform domain name resolution on links that the user may choose to follow. We disable DNS prefetching here -->
     <meta http-equiv="x-dns-prefetch-control" content="off">
     <meta http-equiv="cache-control" content="max-age=60,private">
     <!-- Tell the browser to be responsive to screen width -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Pi-hole<?php echo $hostname ? " - " . $hostname : "" ?></title>
+    <title>SamAd<?php echo $hostname ? " - " . $hostname : "" ?></title>
 
-    <link rel="apple-touch-icon" href="img/favicons/apple-touch-icon.png" sizes="180x180">
-    <link rel="icon" href="img/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
-    <link rel="icon" href="img/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
-    <link rel="manifest" href="img/favicons/manifest.json">
-    <link rel="mask-icon" href="img/favicons/safari-pinned-tab.svg" color="#367fa9">
     <link rel="shortcut icon" href="img/favicons/favicon.ico">
     <meta name="msapplication-TileColor" content="#367fa9">
     <meta name="msapplication-TileImage" content="img/favicons/mstile-150x150.png">
@@ -192,7 +187,7 @@
     <link rel="stylesheet" href="style/vendor/bootstrap/css/bootstrap.min.css?v=<?=$cacheVer?>">
     <link rel="stylesheet" href="style/vendor/datatables.min.css?v=<?=$cacheVer?>">
     <link rel="stylesheet" href="style/vendor/daterangepicker.min.css?v=<?=$cacheVer?>">
-    <link rel="stylesheet" href="style/vendor/AdminLTE.min.css?v=<?=$cacheVer?>">
+    <link rel="stylesheet" href="style/vendor/AdminLTE.min.css">
     <link rel="stylesheet" href="style/vendor/select2.min.css?v=<?=$cacheVer?>">
 
 <?php if (in_array($scriptname, array("groups.php", "groups-adlists.php", "groups-clients.php", "groups-domains.php"))){ ?>
@@ -202,8 +197,10 @@
 <?php } ?>
     <link rel="stylesheet" href="style/pi-hole.css?v=<?=$cacheVer?>">
     <link rel="stylesheet" href="style/themes/<?php echo $theme; ?>.css?v=<?=$cacheVer?>">
-    <noscript><link rel="stylesheet" href="style/vendor/js-warn.css?v=<?=$cacheVer?>"></noscript>
 
+    
+    
+    <noscript><link rel="stylesheet" href="style/vendor/js-warn.css?v=<?=$cacheVer?>"></noscript>
     <script src="scripts/vendor/jquery.min.js?v=<?=$cacheVer?>"></script>
     <script src="style/vendor/bootstrap/js/bootstrap.min.js?v=<?=$cacheVer?>"></script>
     <script src="scripts/vendor/adminlte.min.js?v=<?=$cacheVer?>"></script>
@@ -213,8 +210,12 @@
     <script src="scripts/vendor/moment.min.js?v=<?=$cacheVer?>"></script>
     <script src="scripts/vendor/Chart.min.js?v=<?=$cacheVer?>"></script>
     <script src="style/vendor/font-awesome/js/all.min.js?v=<?=$cacheVer?>"></script>
+
+    <script src="https://unpkg.com/feather-icons/dist/feather.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+
 </head>
-<body class="hold-transition sidebar-mini <?php if($boxedlayout){ ?>layout-boxed<?php } ?>">
+<body class="hold-transition sidebar-mini">
 <noscript>
     <!-- JS Warning -->
     <div>
@@ -238,15 +239,16 @@ if($auth) {
         <!-- Logo -->
         <a href="index.php" class="logo">
             <!-- mini logo for sidebar mini 50x50 pixels -->
-            <span class="logo-mini">P<strong>h</strong></span>
+            <span class="logo-mini">S<strong>A</strong></span>
             <!-- logo for regular state and mobile devices -->
-            <span class="logo-lg">Pi-<strong>hole</strong></span>
+            <span class="logo-lg">Sam<strong>Ad</strong></span>
         </a>
         <!-- Header Navbar: style can be found in header.less -->
         <nav class="navbar navbar-static-top">
             <!-- Sidebar toggle button-->
             <a href="#" class="sidebar-toggle-svg" data-toggle="push-menu" role="button">
-                <i aria-hidden="true" class="fa fa-bars"></i>
+                <!-- <i aria-hidden="true" class="fa fa-bars"></i> -->
+                <i data-feather="menu"></i>
                 <span class="sr-only">Toggle navigation</span>
             </a>
             <div class="navbar-custom-menu">
@@ -265,13 +267,13 @@ if($auth) {
                     </li>
                     <li class="dropdown user user-menu">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
-                            <img src="img/logo.svg" class="user-image" alt="Pi-hole logo" style="border-radius: 0" width="25" height="25">
-                            <span class="hidden-xs">Pi-hole</span>
+                            <img src="img/logo.png" class="user-image" alt="Pi-hole logo" style="border-radius: 0" width="25" height="25">
+                            <span class="hidden-xs">SamAd</span>
                         </a>
                         <ul class="dropdown-menu">
                             <!-- User image -->
                             <li class="user-header">
-                                <img src="img/logo.svg" alt="Pi-hole Logo" style="border: 0" width="90" height="90">
+                                <img src="img/logo.png" alt="Pi-hole Logo" style="border: 0" width="90" height="90">
                                 <p>
                                     Open Source Ad Blocker
                                     <small>Designed For Raspberry Pi</small>
@@ -316,7 +318,7 @@ if($auth) {
             <!-- Sidebar user panel -->
             <div class="user-panel">
                 <div class="pull-left image">
-                    <img src="img/logo.svg" alt="Pi-hole logo" width="45" height="67" style="height: 67px;">
+                    <img src="img/logo.png" alt="Pi-hole logo" width="48" height="48">
                 </div>
                 <div class="pull-left info">
                     <p>Status</p>
@@ -412,8 +414,9 @@ if($auth) {
                 <li class="header text-uppercase">Main navigation</li>
                 <!-- Home Page -->
                 <li<?php if($scriptname === "index.php"){ ?> class="active"<?php } ?>>
-                    <a href="index.php">
-                        <i class="fa fa-fw fa-home"></i> <span>Dashboard</span>
+                    <a href="index.php" class="flex items-center" style="display: flex">
+                    <i data-feather="pie-chart" class="ficon"></i>
+                        <span>Dashboard</span>
                     </a>
                 </li>
                 <?php if($auth){ ?>
@@ -643,18 +646,7 @@ if($auth) {
                     </a>
                 </li>
                 <?php } ?>
-                <!-- Donate -->
-                <li>
-                    <a href="https://pi-hole.net/donate/" rel="noopener" target="_blank">
-                        <i class="fab fa-fw fa-paypal"></i> <span>Donate</span>
-                    </a>
-                </li>
-                 <!-- Docs -->
-                 <li>
-                    <a href="https://docs.pi-hole.net/" rel="noopener" target="_blank">
-                        <i class="fa fa-fw fa-question-circle"></i> <span>Documentation</span>
-                    </a>
-                </li>
+               
             </ul>
         </section>
         <!-- /.sidebar -->
@@ -662,6 +654,9 @@ if($auth) {
     <!-- Content Wrapper. Contains page content -->
     <div class="content-wrapper">
         <!-- Main content -->
+        <script>
+            feather.replace()
+        </script>
         <section class="content">
 <?php
     // If password is not equal to the password set

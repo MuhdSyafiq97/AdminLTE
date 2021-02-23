@@ -60,11 +60,6 @@
     $ftlReleasesUrl = $ftlUrl . "/releases";
 ?>
     <footer class="main-footer">
-        <div class="row row-centered text-center">
-            <div class="col-xs-12 col-sm-6">
-                <strong><a href="https://pi-hole.net/donate/" rel="noopener" target="_blank"><i class="fa fa-heart text-red"></i> Donate</a></strong> if you found this useful.
-            </div>
-        </div>
 
         <div class="row row-centered text-center version-info">
             <div class="col-xs-12 col-sm-8 col-md-6">
@@ -77,7 +72,7 @@
                 <?php } else { ?>
                 <ul class="list-inline">
                     <li>
-                        <strong>Pi-hole</strong>
+                        <strong>SamAd</strong>
                         <a href="<?php echo $coreReleasesUrl . "/" . $core_current; ?>" rel="noopener" target="_blank"><?php echo $core_current; ?></a>
                         <?php if ($core_update) { ?> &middot; <a class="lookatme" href="<?php echo $coreReleasesUrl . "/latest"; ?>" rel="noopener" target="_blank">Update available!</a><?php } ?>
                     </li>
@@ -100,5 +95,8 @@
 </div>
 <!-- ./wrapper -->
 <script src="scripts/pi-hole/js/footer.js?v=<?=$cacheVer?>"></script>
+<script>
+  feather.replace()
+</script>
 </body>
 </html>
