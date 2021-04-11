@@ -318,12 +318,12 @@
   color: #fff;
   float: left;
   background: none;
-  padding: 15px;
+  padding: 10px;
 }
 
 .sidebar-toggle-svg:hover {
   color: #f6f6f6;
-  background: #367fa9;
+  background: #108010;
 }
 
 .box,
