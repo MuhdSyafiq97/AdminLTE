@@ -69,24 +69,24 @@
     }
 
     // Get load
-    // $loaddata = sys_getloadavg();
-    // foreach ($loaddata as $key => $value) {
-    //     $loaddata[$key] = round($value, 2);
-    // }
+     $loaddata = sys_getloadavg();
+     foreach ($loaddata as $key => $value) {
+         $loaddata[$key] = round($value, 2);
+     }
     // Get number of processing units available to PHP
     // (may be less than the number of online processors)
     $nproc = shell_exec('nproc');
-    /* if(!is_numeric($nproc))
+    if(!is_numeric($nproc))
     {
         $cpuinfo = file_get_contents('/proc/cpuinfo');
         preg_match_all('/^processor/m', $cpuinfo, $matches);
         $nproc = count($matches[0]);
-    } */
+    }
 
     // Get memory usage
-    // $data = explode("\n", file_get_contents("/proc/meminfo"));
+    $data = explode("\n", file_get_contents("/proc/meminfo"));
     $meminfo = array();
-    /* if(count($data) > 0)
+    if(count($data) > 0)
     {
         foreach ($data as $line) {
             $expl = explode(":", trim($line));
@@ -103,7 +103,7 @@
     else
     {
         $memory_usage = -1;
-    } */
+    }
 
     if($auth) {
         // For session timer
