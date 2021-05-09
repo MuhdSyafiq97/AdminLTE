@@ -46,7 +46,7 @@
                            by their hostnames (like <code>localhost</code>), or by the interface they are connected to (prefaced with a colon, like <code>:eth0</code>).</p>
                         <p>Note that client recognition by IP addresses (incl. subnet ranges) are prefered over MAC address, host name or interface recognition as
                            the two latter will only be available after some time.
-                           Furthermore, MAC address recognition only works for devices at most one networking hop away from your Pi-hole.</p>
+                           Furthermore, MAC address recognition only works for devices at most one networking hop away from your SamAd.</p>
                     </div>
                 </div>
             </div>

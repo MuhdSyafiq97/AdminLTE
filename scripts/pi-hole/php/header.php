@@ -523,10 +523,10 @@ if($auth) {
                     </span>
                   </a>
                   <ul class="treeview-menu">
-                    <!-- Pi-hole diagnosis -->
+                    <!-- SamAd diagnosis -->
                     <li<?php if($scriptname === "messages.php"){ ?> class="active"<?php } ?>>
                         <a href="messages.php">
-                            <i class="fa fa-fw fa-stethoscope"></i> Pi-hole diagnosis
+                            <i class="fa fa-fw fa-stethoscope"></i> SamAd diagnosis
                         </a>
                     </li>
                     <!-- Run gravity.sh -->
@@ -547,16 +547,16 @@ if($auth) {
                             <i class="fa fa-fw fa-balance-scale"></i> Audit log
                         </a>
                     </li>
-                    <!-- Tail pihole.log -->
+                    <!-- Tail SamAd.log -->
                     <li<?php if($scriptname === "taillog.php"){ ?> class="active"<?php } ?>>
                         <a href="taillog.php">
-                            <i class="fa fa-fw fa-list-ul"></i> Tail pihole.log
+                            <i class="fa fa-fw fa-list-ul"></i> Tail SamAd.log
                         </a>
                     </li>
-                    <!-- Tail pihole-FTL.log -->
+                    <!-- Tail SamAd-FTL.log -->
                     <li<?php if($scriptname === "taillog-FTL.php"){ ?> class="active"<?php } ?>>
                         <a href="taillog-FTL.php">
-                            <i class="fa fa-fw fa-list-ul"></i> Tail pihole-FTL.log
+                            <i class="fa fa-fw fa-list-ul"></i> Tail SamAd-FTL.log
                         </a>
                     </li>
                     <!-- Generate debug log -->

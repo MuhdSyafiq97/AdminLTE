@@ -10,8 +10,8 @@
 
 <!-- Title -->
 <div class="page-header">
-    <h1>Pi-hole diagnosis</h1>
-    <small>On this page, you can see messages from your Pi-hole concerning possible issues.</small>
+    <h1>SamAd diagnosis</h1>
+    <small>On this page, you can see messages from your SamAd concerning possible issues.</small>
 </div>
 
 <div class="row">

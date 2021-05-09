@@ -266,19 +266,19 @@ if (isset($_GET['tab']) && in_array($_GET['tab'], array("sysadmin", "adlists", "
                                             <table class="table table-striped table-bordered nowrap">
                                                 <tbody>
                                                 <tr>
-                                                    <th scope="row">Pi-hole Ethernet Interface:</th>
+                                                    <th scope="row">SamAd Ethernet Interface:</th>
                                                     <td><?php echo htmlentities($piHoleInterface); ?></td>
                                                 </tr>
                                                 <tr>
-                                                    <th scope="row">Pi-hole IPv4 address:</th>
+                                                    <th scope="row">SamAd IPv4 address:</th>
                                                     <td><?php echo htmlentities($piHoleIPv4); ?></td>
                                                 </tr>
                                                 <tr>
-                                                    <th scope="row">Pi-hole IPv6 address:</th>
+                                                    <th scope="row">SamAd IPv6 address:</th>
                                                     <td class="breakall"><?php echo htmlentities($piHoleIPv6); ?></td>
                                                 </tr>
                                                 <tr>
-                                                    <th scope="row">Pi-hole hostname:</th>
+                                                    <th scope="row">SamAd hostname:</th>
                                                     <td><?php echo htmlentities($hostname); ?></td>
                                                 </tr>
                                                 </tbody>
@@ -445,10 +445,10 @@ if (isset($_GET['tab']) && in_array($_GET['tab'], array("sysadmin", "adlists", "
                         <div class="col-md-12">
                             <div class="box">
                                 <div class="box-header with-border">
-                                    <h3 class="box-title">Adlists used to generate Pi-hole's Gravity</h3>
+                                    <h3 class="box-title">Adlists used to generate SamAd's Gravity</h3>
                                 </div>
                                 <div class="box-body">
-                                    <p>Please use the <a href="groups-adlists.php">group management pages</a> to edit the adlists used by Pi-hole.</p>
+                                    <p>Please use the <a href="groups-adlists.php">group management pages</a> to edit the adlists used by SamAd.</p>
                                 </div>
                             </div>
                         </div>
@@ -537,7 +537,7 @@ if (isset($_GET['tab']) && in_array($_GET['tab'], array("sysadmin", "adlists", "
                                         <div class="row">
                                             <div class="col-md-12">
                                                 <div><input type="checkbox" name="active" id="DHCPchk" <?php if ($DHCP){ ?>checked<?php } ?>><label for="DHCPchk"><strong>DHCP server enabled</strong></label></div><br>
-                                                <p id="dhcpnotice" <?php if (!$DHCP){ ?>hidden<?php } ?>>Make sure your router's DHCP server is disabled when using the Pi-hole DHCP server!</p>
+                                                <p id="dhcpnotice" <?php if (!$DHCP){ ?>hidden<?php } ?>>Make sure your router's DHCP server is disabled when using the SamAd DHCP server!</p>
                                             </div>
                                         </div>
                                         <div class="row">
@@ -590,7 +590,7 @@ if (isset($_GET['tab']) && in_array($_GET['tab'], array("sysadmin", "adlists", "
                                     <div class="box-body">
                                         <div class="row">
                                             <div class="col-md-12">
-                                                <label>Pi-hole domain name</label>
+                                                <label>SamAd domain name</label>
                                                 <div class="form-group">
                                                     <div class="input-group">
                                                         <div class="input-group-addon">Domain</div>
@@ -936,9 +936,9 @@ if (isset($_GET['tab']) && in_array($_GET['tab'], array("sysadmin", "adlists", "
                                                 </div>
                                                 <p>Note that the last option should not be used on devices which are
                                                    directly connected to the Internet. This option is safe if your
-                                                   Pi-hole is located within your local network, i.e. protected behind
+                                                   SamAd is located within your local network, i.e. protected behind
                                                    your router, and you have not forwarded port 53 to this device. In
-                                                   virtually all other cases you have to make sure that your Pi-hole is
+                                                   virtually all other cases you have to make sure that your SamAd is
                                                    properly firewalled.</p>
                                             </div>
                                         </div>
@@ -958,7 +958,7 @@ if (isset($_GET['tab']) && in_array($_GET['tab'], array("sysadmin", "adlists", "
                                                 <div>
                                                     <input type="checkbox" name="DNSrequiresFQDN" id="DNSrequiresFQDN" title="domain-needed" <?php if ($DNSrequiresFQDN){ ?>checked<?php } ?>>
                                                     <label for="DNSrequiresFQDN"><strong>Never forward non-FQDNs</strong></label>
-                                                    <p>When there is a Pi-hole domain set and this box is
+                                                    <p>When there is a SamAd domain set and this box is
                                                     ticked, this asks FTL that this domain is purely
                                                     local and FTL may answer queries from <code>/etc/hosts</code> or DHCP leases
                                                     but should never forward queries on that domain to any upstream servers.</p>
@@ -972,14 +972,14 @@ if (isset($_GET['tab']) && in_array($_GET['tab'], array("sysadmin", "adlists", "
                                                     of prefixes affected is the list given in <a href="https://tools.ietf.org/html/rfc6303">RFC6303</a>.</p>
                                                     <p><strong>Important</strong>: Enabling these two options may increase your privacy,
                                                     but may also prevent you from being able to access
-                                                    local hostnames if the Pi-hole is not used as DHCP server.</p>
+                                                    local hostnames if the SamAd is not used as DHCP server.</p>
                                                 </div>
                                                 <br>
                                                 <div>
                                                     <input type="checkbox" name="DNSSEC" id="DNSSEC" <?php if ($DNSSEC){ ?>checked<?php } ?>>
                                                     <label for="DNSSEC"><strong>Use DNSSEC</strong></label>
                                                     <p>Validate DNS replies and cache DNSSEC data. When forwarding DNS
-                                                    queries, Pi-hole requests the DNSSEC records needed to validate
+                                                    queries, SamAd requests the DNSSEC records needed to validate
                                                     the replies. If a domain fails validation or the upstream does not
                                                     support DNSSEC, this setting can cause issues resolving domains.
                                                     Use an upstream DNS server which supports DNSSEC when activating DNSSEC. Note that
@@ -989,10 +989,10 @@ if (isset($_GET['tab']) && in_array($_GET['tab'], array("sysadmin", "adlists", "
                                                 </div>
                                                 <br>
                                                 <h4>Conditional forwarding</h4>
-                                                <p>If not configured as your DHCP server, Pi-hole  typically won't be able to
+                                                <p>If not configured as your DHCP server, SamAd  typically won't be able to
                                                    determine the names of devices on your local network.  As a
                                                    result, tables such as Top Clients will only show IP addresses.</p>
-                                                <p>One solution for this is to configure Pi-hole to forward these
+                                                <p>One solution for this is to configure SamAd to forward these
 	                                               requests to your DHCP server (most likely your router), but only for devices on your
 	                                               home network.  To configure this we will need to know the IP
 	                                               address of your DHCP server and which addresses belong to your local network.
@@ -1292,7 +1292,7 @@ if (isset($_GET['tab']) && in_array($_GET['tab'], array("sysadmin", "adlists", "
                                                 </div>
                                                 <p>The privacy level may be increased at any time without having to restart the DNS resolver. However, note that the DNS resolver needs to be restarted when lowering the privacy level. This restarting is automatically done when saving.</p>
                                                 <?php if($privacylevel > 0 && $piHoleLogging){ ?>
-                                                <p class="lookatme">Warning: Pi-hole's query logging is activated. Although the dashboard will hide the requested details, all queries are still fully logged to the pihole.log file.</p>
+                                                <p class="lookatme">Warning: SamAd's query logging is activated. Although the dashboard will hide the requested details, all queries are still fully logged to the pihole.log file.</p>
                                                 <?php } ?>
                                             </div>
                                         </div>
@@ -1323,7 +1323,7 @@ if (isset($_GET['tab']) && in_array($_GET['tab'], array("sysadmin", "adlists", "
                                     <div class="box-body">
                                         <div class="row">
                                             <div class="col-lg-12">
-                                                <p>Backup your Pi-hole configuration (settings &amp; lists) as a downloadable archive</p>
+                                                <p>Backup your SamAd configuration (settings &amp; lists) as a downloadable archive</p>
                                                 <button type="submit" class="btn btn-default">Backup</button>
                                             </div>
                                         </div>
@@ -1395,7 +1395,7 @@ if (isset($_GET['tab']) && in_array($_GET['tab'], array("sysadmin", "adlists", "
                                             <div class="col-lg-12">
                                                 <label for="zip_file">File input</label>
                                                 <input type="file" name="zip_file" id="zip_file">
-                                                <p class="help-block">Upload only Pi-hole backup files.</p>
+                                                <p class="help-block">Upload only SamAd backup files.</p>
                                             </div>
                                         </div>
                                         <div class="row">
@@ -1420,7 +1420,7 @@ if (isset($_GET['tab']) && in_array($_GET['tab'], array("sysadmin", "adlists", "
                                     <h3 class="box-title">Teleporter</h3>
                                 </div>
                                 <div class="box-body">
-                                    <p>The PHP extension <code>Phar</code> is not loaded. Please ensure it is installed and loaded if you want to use the Pi-hole teleporter.</p>
+                                    <p>The PHP extension <code>Phar</code> is not loaded. Please ensure it is installed and loaded if you want to use the SamAd teleporter.</p>
                                 </div>
                             </div>
                         </div>

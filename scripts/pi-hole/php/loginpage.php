@@ -14,7 +14,7 @@
       </div>
       <br>
 
-      <div class="panel-title text-center"><span class="logo-lg" style="font-size: 25px;">Pi-<b>hole</b></span></div>
+      <div class="panel-title text-center"><span class="logo-lg" style="font-size: 25px;">Sam<b>Ad</b></span></div>
       <p class="login-box-msg">Sign in to start your session</p>
       <div id="cookieInfo" class="panel-title text-center text-red" style="font-size: 150%" hidden>Verify that cookies are allowed for <code><?php echo $_SERVER['HTTP_HOST']; ?></code></div>
       <?php if ($wrongpassword) { ?>
@@ -62,7 +62,7 @@
                 </div>
               </div>
               <div class="box-body">
-                After installing Pi-hole for the first time, a password is generated and displayed to the user. The
+                After installing SamAd for the first time, a password is generated and displayed to the user. The
                 password cannot be retrieved later on, but it is possible to set a new password (or explicitly disable
                 the password by setting an empty password) using the command
                 <pre>sudo pihole -a -p</pre>

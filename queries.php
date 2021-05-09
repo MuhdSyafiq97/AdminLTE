@@ -42,7 +42,7 @@ else
 $showall = false;
 if(isset($_GET["all"]))
 {
-	$showing .= " all queries within the Pi-hole log";
+	$showing .= " all queries within the SamAd log";
 }
 else if(isset($_GET["client"]))
 {
