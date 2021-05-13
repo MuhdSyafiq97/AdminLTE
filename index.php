@@ -74,24 +74,7 @@
     <!-- ./col -->
 </div>
 
-<div class="row">
-    <div class="col-md-12">
-    <div class="box" id="queries-over-time">
-        <div class="box-header with-border">
-          <h3 class="box-title">Total queries over last <?php echo getinterval(); ?> hours</h3>
-        </div>
-        <div class="box-body">
-          <div class="chart">
-            <canvas id="queryOverTimeChart" width="800" height="140"></canvas>
-          </div>
-        </div>
-        <div class="overlay">
-          <i class="fa fa-sync fa-spin"></i>
-        </div>
-        <!-- /.box-body -->
-      </div>
-    </div>
-</div>
+
 <?php
   // If the user is logged in, then we show the more detailed index page.
   // Even if we would include them here anyhow, there would be nothing to
