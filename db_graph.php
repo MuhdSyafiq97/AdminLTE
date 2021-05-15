@@ -43,30 +43,6 @@
   </div>
 </div>
 
-<div class="row">
-  <div class="col-md-12">
-    <div class="box" id="queries-over-time">
-      <div class="box-header with-border">
-        <h3 class="box-title">
-          Queries over the selected time period
-        </h3>
-      </div>
-      <div class="box-body">
-        <div class="row">
-          <div class="col-md-12">
-            <div class="chart">
-              <canvas id="queryOverTimeChart" width="800" height="250"></canvas>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="overlay" hidden>
-        <i class="fa fa-sync fa-spin"></i>
-      </div>
-    </div>
-  </div>
-</div>
-
 <script src="scripts/vendor/daterangepicker.min.js?v=<?=$cacheVer?>"></script>
 <script src="scripts/pi-hole/js/utils.js?v=<?=$cacheVer?>"></script>
 <script src="scripts/pi-hole/js/db_graph.js?v=<?=$cacheVer?>"></script>
