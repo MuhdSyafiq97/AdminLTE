@@ -436,11 +436,7 @@ if($auth) {
                   </ul>
                 </li>
                 <!-- Settings -->
-                <li<?php if($scriptname === "settings.php"){ ?> class="active"<?php } ?>>
-                    <a href="settings.php">
-                        <i class="fa fa-fw fa-cogs"></i> <span>Settings</span>
-                    </a>
-                </li>
+               
                 <!-- Local DNS Records -->
               
                 <!-- Logout -->
