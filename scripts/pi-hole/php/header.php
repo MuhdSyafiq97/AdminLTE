@@ -328,11 +328,7 @@ if($auth) {
                 </li>
                
                 <!-- Whitelist -->
-                <li<?php if($scriptname === "whitelist"){ ?> class="active"<?php } ?>>
-                    <a href="groups-domains.php?type=white">
-                        <i class="fa fa-fw fa-check-circle "></i> <span>Whitelist</span>
-                    </a>
-                </li>
+               
                 <!-- Blacklist -->
                 <li<?php if($scriptname === "blacklist"){ ?> class="active"<?php } ?>>
                     <a href="groups-domains.php?type=black">
