@@ -367,42 +367,7 @@ if($auth) {
                   </ul>
                 </li>
                 <!-- Toggle -->
-                <li id="pihole-disable" class="treeview"<?php if ($pistatus == "0") { ?> hidden<?php } ?>>
-                  <a href="#">
-                    <span class="pull-right-container">
-                      <i class="fa fa-angle-left pull-right"></i>
-                    </span>
-                    <i class="fa fa-fw fa-stop"></i> <span>Disable&nbsp;&nbsp;&nbsp;<span id="flip-status-disable"></span></span>
-                  </a>
-                  <ul class="treeview-menu">
-                    <li>
-                        <a href="#" id="pihole-disable-indefinitely">
-                            <i class="fa fa-fw fa-stop"></i> Indefinitely
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#" id="pihole-disable-10s">
-                            <i class="fa fa-fw fa-clock"></i> For 10 seconds
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#" id="pihole-disable-30s">
-                            <i class="fa fa-fw fa-clock"></i> For 30 seconds
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#" id="pihole-disable-5m">
-                            <i class="fa fa-fw fas fa-clock"></i> For 5 minutes
-                        </a>
-                    </li>
-                    <li>
-                      <a href="#" id="pihole-disable-cst" data-toggle="modal" data-target="#customDisableModal">
-                            <i class="fa fa-fw fa-clock"></i> <span>Custom time</span>
-                      </a>
-                    </li>
-                  </ul>
-                    <!-- <a href="#" id="flip-status"><i class="fa fa-stop"></i> <span>Disable</span></a> -->
-                </li>
+               
                 <li id="pihole-enable" class="treeview"<?php if ($pistatus == "1") { ?> hidden<?php } ?>>
                     <a href="#">
                       <i class="fa fa-fw fa-play"></i>
