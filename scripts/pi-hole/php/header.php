@@ -326,31 +326,7 @@ if($auth) {
                         <i class="fa fa-fw fa-file-alt"></i> <span>Query Log</span>
                     </a>
                 </li>
-                <li class="treeview<?php if($scriptname === "db_queries.php" || $scriptname === "db_lists.php" || $scriptname === "db_graph.php"){ ?> active<?php } ?>">
-                  <a href="#">
-                    <i class="fa fa-clock"></i> <span>Long-term data</span>
-                    <span class="pull-right-container">
-                      <i class="fa fa-angle-left pull-right"></i>
-                    </span>
-                  </a>
-                  <ul class="treeview-menu">
-                    <li<?php if($scriptname === "db_graph.php"){ ?> class="active"<?php } ?>>
-                        <a href="db_graph.php">
-                            <i class="fa fa-fw fa-file-alt"></i> Graphics
-                        </a>
-                    </li>
-                    <li<?php if($scriptname === "db_queries.php"){ ?> class="active"<?php } ?>>
-                        <a href="db_queries.php">
-                            <i class="fa fa-fw fa-file-alt"></i> Query Log
-                        </a>
-                    </li>
-                    <li<?php if($scriptname === "db_lists.php"){ ?> class="active"<?php } ?>>
-                        <a href="db_lists.php">
-                            <i class="fa fa-fw fa-file-alt"></i> Top Lists
-                        </a>
-                    </li>
-                  </ul>
-                </li>
+               
                 <!-- Whitelist -->
                 <li<?php if($scriptname === "whitelist"){ ?> class="active"<?php } ?>>
                     <a href="groups-domains.php?type=white">
