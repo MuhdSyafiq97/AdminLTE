@@ -335,37 +335,13 @@ if($auth) {
                         <i class="fa fa-fw fa-ban"></i> <span>Blacklist</span>
                     </a>
                 </li>
-                <!-- Group Management -->
-                <li class="treeview<?php if (in_array($scriptname, array("groups.php", "groups-adlists.php", "groups-clients.php", "groups-domains.php"))){ ?> active<?php } ?>">
-                  <a href="#">
-                    <i class="fa fa-fw fa-users-cog"></i> <span>Group Management</span>
-                    <span class="pull-right-container">
-                      <i class="fa fa-angle-left pull-right"></i>
-                    </span>
-                  </a>
-                  <ul class="treeview-menu">
-                    <li<?php if($scriptname === "groups.php"){ ?> class="active"<?php } ?>>
-                        <a href="groups.php">
-                            <i class="fa fa-fw fa-user-friends"></i> Groups
-                        </a>
-                    </li>
-                    <li<?php if($scriptname === "groups-clients.php"){ ?> class="active"<?php } ?>>
-                        <a href="groups-clients.php">
-                            <i class="fa fa-fw fa-laptop"></i> Clients
-                        </a>
-                    </li>
-                    <li<?php if($scriptname === "groups-domains.php"){ ?> class="active"<?php } ?>>
-                        <a href="groups-domains.php">
-                            <i class="fa fa-fw fa-list"></i> Domains
-                        </a>
-                    </li>
-                    <li<?php if($scriptname === "groups-adlists.php"){ ?> class="active"<?php } ?>>
+                
+                <li<?php if($scriptname === "groups-adlists.php"){ ?> class="active"<?php } ?>>
                         <a href="groups-adlists.php">
                             <i class="fa fa-fw fa-shield-alt"></i> Adlists
                         </a>
                     </li>
-                  </ul>
-                </li>
+               
                 <!-- Toggle -->
                
                 <li id="pihole-enable" class="treeview"<?php if ($pistatus == "1") { ?> hidden<?php } ?>>
