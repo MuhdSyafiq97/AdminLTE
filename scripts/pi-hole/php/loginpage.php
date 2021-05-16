@@ -37,12 +37,6 @@
         </div>
         <br>
         <div class="row">
-          <div class="col-xs-8 hidden-xs hidden-sm">
-            <ul>
-              <li><kbd>Return</kbd> &rarr; Log in and go to requested page (<?php echo $scriptname; ?>)</li>
-              <li><kbd>Ctrl</kbd>+<kbd>Return</kbd> &rarr; Log in and go to Settings page</li>
-            </ul>
-          </div>
           <div class="col-xs-12 col-md-4">
             <div>
               <input type="checkbox" id="logincookie" name="persistentlogin">
@@ -65,7 +59,7 @@
                 After installing SamAd for the first time, a password is generated and displayed to the user. The
                 password cannot be retrieved later on, but it is possible to set a new password (or explicitly disable
                 the password by setting an empty password) using the command
-                <pre>sudo pihole -a -p</pre>
+                <pre>sudo samad -a -p</pre>
               </div>
             </div>
           </div>
