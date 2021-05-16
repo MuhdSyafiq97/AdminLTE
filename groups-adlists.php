@@ -39,7 +39,7 @@
             <div class="box-footer clearfix">
                 <strong>Hints:</strong>
                 <ol>
-                    <li>Please run <code>pihole -g</code> or update your gravity list <a href="gravity.php">online</a> after modifying your adlists.</li>
+                    <li>Update your gravity list <a href="gravity.php">online</a> after modifying your adlists.</li>
                     <li>Multiple adlists can be added by separating each <i>unique</i> URL with a space</li>
                 </ol>
                 <button type="button" id="btnAdd" class="btn btn-primary pull-right">Add</button>
