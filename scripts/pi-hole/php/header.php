@@ -361,11 +361,7 @@ if($auth) {
                   </a>
                   <ul class="treeview-menu">
                     <!-- SamAd diagnosis -->
-                    <li<?php if($scriptname === "messages.php"){ ?> class="active"<?php } ?>>
-                        <a href="messages.php">
-                            <i class="fa fa-fw fa-stethoscope"></i> SamAd diagnosis
-                        </a>
-                    </li>
+                   
                     <!-- Run gravity.sh -->
                     <li<?php if($scriptname === "gravity.php"){ ?> class="active"<?php } ?>>
                         <a href="gravity.php">
@@ -397,17 +393,9 @@ if($auth) {
                         </a>
                     </li>
                     <!-- Generate debug log -->
-                    <li<?php if($scriptname === "debug.php"){ ?> class="active"<?php } ?>>
-                        <a href="debug.php">
-                            <i class="fa fa-fw fa-ambulance"></i> Generate debug log
-                        </a>
-                    </li>
+                  
                     <!-- Network -->
-                    <li<?php if($scriptname === "network.php"){ ?> class="active"<?php } ?>>
-                        <a href="network.php">
-                            <i class="fa fa-fw fa-network-wired"></i> Network
-                        </a>
-                    </li>
+                   
                   </ul>
                 </li>
                 <!-- Settings -->
