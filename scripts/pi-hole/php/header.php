@@ -381,17 +381,9 @@ if($auth) {
                         </a>
                     </li>
                     <!-- Tail SamAd.log -->
-                    <li<?php if($scriptname === "taillog.php"){ ?> class="active"<?php } ?>>
-                        <a href="taillog.php">
-                            <i class="fa fa-fw fa-list-ul"></i> Tail SamAd.log
-                        </a>
-                    </li>
+                  
                     <!-- Tail SamAd-FTL.log -->
-                    <li<?php if($scriptname === "taillog-FTL.php"){ ?> class="active"<?php } ?>>
-                        <a href="taillog-FTL.php">
-                            <i class="fa fa-fw fa-list-ul"></i> Tail SamAd-FTL.log
-                        </a>
-                    </li>
+                
                     <!-- Generate debug log -->
                   
                     <!-- Network -->
