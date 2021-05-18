@@ -63,31 +63,10 @@
 
         <div class="row row-centered text-center version-info">
             <div class="col-xs-12 col-sm-8 col-md-6">
-                <?php if (isset($core_commit) || isset($web_commit) || isset($FTL_commit)) { ?>
+    
                 <ul class="list-unstyled">
-                    <li><strong>Pi-hole</strong> <?php echo $coreVersionStr; ?></li>
-                    <li><strong>Web Interface</strong> <?php echo $webVersionStr; ?></li>
-                    <li><strong>FTL</strong> <?php echo $ftlVersionStr; ?></li>
+                    <li><strong>SamAd</strong> copyright SamAd Unikl MIIT 2021</li>
                 </ul>
-                <?php } else { ?>
-                <ul class="list-inline">
-                    <li>
-                        <strong>SamAd</strong>
-                        <a href="<?php echo $coreReleasesUrl . "/" . $core_current; ?>" rel="noopener" target="_blank"><?php echo $core_current; ?></a>
-                        <?php if ($core_update) { ?> &middot; <a class="lookatme" href="<?php echo $coreReleasesUrl . "/latest"; ?>" rel="noopener" target="_blank">Update available!</a><?php } ?>
-                    </li>
-                    <li>
-                        <strong>Web Interface</strong>
-                        <a href="<?php echo $webReleasesUrl . "/" . $web_current; ?>" rel="noopener" target="_blank"><?php echo $web_current; ?></a>
-                        <?php if ($web_update) { ?> &middot; <a class="lookatme" href="<?php echo $webReleasesUrl . "/latest"; ?>" rel="noopener" target="_blank">Update available!</a><?php } ?>
-                    </li>
-                    <li>
-                        <strong>FTL</strong>
-                        <a href="<?php echo $ftlReleasesUrl . "/" . $FTL_current; ?>" rel="noopener" target="_blank"><?php echo $FTL_current; ?></a>
-                        <?php if ($FTL_update) { ?> &middot; <a class="lookatme" href="<?php echo $ftlReleasesUrl . "/latest"; ?>" rel="noopener" target="_blank">Update available!</a><?php } ?>
-                    </li>
-                </ul>
-                <?php } ?>
             </div>
         </div>
     </footer>

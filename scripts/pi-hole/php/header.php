@@ -343,14 +343,7 @@ if($auth) {
                
                 <!-- Toggle -->
                
-                <li id="pihole-enable" class="treeview"<?php if ($pistatus == "1") { ?> hidden<?php } ?>>
-                    <a href="#">
-                      <i class="fa fa-fw fa-play"></i>
-                      <span id="enableLabel">Enable&nbsp;&nbsp;&nbsp;
-                        <span id="flip-status-enable"></span>
-                      </span>
-                    </a>
-                </li>
+               
                 <!-- Tools -->
                 <li class="treeview<?php if (in_array($scriptname, array("messages.php", "gravity.php", "queryads.php", "auditlog.php", "taillog.php", "taillog-FTL.php", "debug.php", "network.php"))){ ?> active<?php } ?>">
                   <a href="#">
